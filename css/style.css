@@ -31,20 +31,26 @@ table{
     max-width: 700px;
     width: 100%;
 
-    background-color: rgba(84, 36, 182, 0.22);
+    background-color: rgba(56, 36, 182, 0.179);
     border-collapse: collapse;
     color: rgb(255, 255, 255);
     font-family: 'Rawline';
 
     border-radius: 30px;
-    overflow: hidden;
-
+    
     box-shadow: 5px 2px 19px #394ade52;
+    
+    overflow: hidden;
 }
-
 
 table thead{
     background-color: rgba(33, 31, 124, 0.172);
+}
+
+table td:nth-of-type(1),
+table td:nth-of-type(2)
+{
+    border-right: 1px rgba(51, 60, 184, 0.24) solid;
 }
 
 table th,
@@ -63,5 +69,6 @@ table tr:hover{
 
 table thead tr:hover{
     background-color: transparent;
-    cursor: default
+    cursor: default;
+    user-select: none;
 }
