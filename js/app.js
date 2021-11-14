@@ -1,70 +1,49 @@
-var capitais = []
-var paises = []
-var continentes = []
+function criarTabela(res){
+    const container = document.querySelector('.container')
+    const tabela = document.createElement('table')
+    
+    const primeiraLinha = document.createElement('thead')
+    const pais = document.createElement('td')
+    const capital = document.createElement('td')
+    const continente = document.createElement('td')
 
+    pais.innerHTML = 'Pais'
+    capital.innerHTML = 'Capital'
+    continente.innerHTML = 'Continente'
+
+    primeiraLinha.appendChild(pais)
+    primeiraLinha.appendChild(capital)
+    primeiraLinha.appendChild(continente)
+
+    tabela.appendChild(primeiraLinha)
+
+    const linhas = res.map(res => {
+
+        const tdPais =  document.createElement('td')
+        tdPais.innerHTML = res.pais
+
+        const tdCapital =  document.createElement('td')
+        tdCapital.innerHTML = res.capital
+
+        const tdContinente =  document.createElement('td')
+        tdContinente.innerHTML = res.continente
+
+        const tr = document.createElement('tr')
+
+        tr.appendChild(tdPais)
+        tr.appendChild(tdCapital)
+        tr.appendChild(tdContinente)
+
+        return tr
+    })
+    linhas.forEach(linha => tabela.appendChild(linha))
+    container.appendChild(tabela)
+}
 
 fetch('/../capitais.json')
     .then(res => res.json())
     .then(res => {
-            capitais.push(res.map(c => c.capital))
-            paises.push(res.map(p => p.pais))
-            continentes.push(res.map(co => co.continente))
-            return res
-        })
-        .then(console.log)
-                
+        criarTabela(res)
 
-    const tbody = document.querySelector('tbody')
-    var trPaises = document.querySelectorAll('[tipo="pais"]')
-    var trCapital = document.querySelectorAll('[tipo="capital"]')
-    var trContinente = document.querySelectorAll('[tipo="continente"]')
-
-setTimeout( () => {  
-
-    capitais = capitais[0] 
-    paises = paises[0] 
-    continentes = continentes[0] 
-    
-    paises.forEach( e => {     
-        const trPais = document.createElement('tr')
-        trPais.setAttribute('tipo', 'pais')
-
-        const tdPais = document.createElement('td')
-        
-        tbody.appendChild(trPais)
-        trPais.appendChild(tdPais)
-        tdPais.innerText = e
-    })
-
-    trPaises = document.querySelectorAll('[tipo="pais"]')
-    
-    trPaises.forEach( tp => {
-        const tdCapital = document.createElement('td')
-        tdCapital.setAttribute('tipo', 'capital')
-
-        tp.appendChild(tdCapital)
-    })
-
-    trCapital = document.querySelectorAll('[tipo="capital"]')
-
-    trCapital.forEach( (tc, index) =>{
-            tc.innerText = capitais[index]          
-    })
-
-
-    // ---
-
-    trPaises.forEach( tp => {
-        const tdContinente = document.createElement('td')
-        tdContinente.setAttribute('tipo', 'continente')
-
-        tp.appendChild(tdContinente)
-    })
-
-    trContinente = document.querySelectorAll('[tipo="continente"]')
-
-    trContinente.forEach( (tco, index) =>{
-            tco.innerText = continentes[index]          
-    })
-}, 200)
-
+})
+    .catch(erro => console.log('erro:', erro))
