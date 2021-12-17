@@ -13,8 +13,12 @@ body{
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
-    background: linear-gradient(#9FF2FC, #CDB7F7, #8579EC)
+    padding: 30px;
+
+    background: linear-gradient(#c8f8fd, #d2b9ff, #ada3ff)
 }
 
 .container{
@@ -22,29 +26,42 @@ body{
     height: 100%;
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
+    
+    overflow: hidden;
+    overflow-y: scroll;
+
+    height: 90vh;
+    max-height: 90vh;
+    max-width: 700px;
+
+    border-radius: 20px;
+}
+
+.container::-webkit-scrollbar{
+    width: 0;
 }
 
 table{
-    max-width: 700px;
+    height: 100%;
     width: 100%;
 
-    background-color: rgba(56, 36, 182, 0.179);
+    overflow-x: scroll;
+
+
+    background-color: rgba(28, 66, 170, 0.527);
     border-collapse: collapse;
     color: rgb(255, 255, 255);
     font-family: 'Rawline';
 
-    border-radius: 30px;
     
     box-shadow: 5px 2px 19px #394ade52;
-    
-    overflow: hidden;
-}
+    }
 
 table thead{
-    background-color: rgba(33, 31, 124, 0.172);
+    background-color: rgba(30, 29, 88, 0.801);
 }
 
 table td:nth-of-type(1),
@@ -59,7 +76,7 @@ table td{
 }
 
 table tr:nth-child(even){
-    background-color: #394ade13;
+    background-color: #2b383a3b;
 }
 
 table tr:hover{

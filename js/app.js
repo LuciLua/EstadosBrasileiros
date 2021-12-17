@@ -3,36 +3,36 @@ function criarTabela(res){
     const tabela = document.createElement('table')
     
     const primeiraLinha = document.createElement('thead')
-    const pais = document.createElement('td')
-    const capital = document.createElement('td')
-    const continente = document.createElement('td')
+    const Sigla = document.createElement('td')
+    const Nome = document.createElement('td')
+    const Localidade = document.createElement('td')
 
-    pais.innerHTML = 'Pais'
-    capital.innerHTML = 'Capital'
-    continente.innerHTML = 'Continente'
+    Sigla.innerHTML = 'Sigla'
+    Nome.innerHTML = 'Nome'
+    Localidade.innerHTML = 'Localidade'
 
-    primeiraLinha.appendChild(pais)
-    primeiraLinha.appendChild(capital)
-    primeiraLinha.appendChild(continente)
+    primeiraLinha.appendChild(Sigla)
+    primeiraLinha.appendChild(Nome)
+    primeiraLinha.appendChild(Localidade)
 
     tabela.appendChild(primeiraLinha)
 
     const linhas = res.map(res => {
 
-        const tdPais =  document.createElement('td')
-        tdPais.innerHTML = res.pais
+        const tdSigla =  document.createElement('td')
+        tdSigla.innerHTML = res.sigla
 
-        const tdCapital =  document.createElement('td')
-        tdCapital.innerHTML = res.capital
+        const tdNome =  document.createElement('td')
+        tdNome.innerHTML = res.nome
 
-        const tdContinente =  document.createElement('td')
-        tdContinente.innerHTML = res.continente
+        const tdLocalidade =  document.createElement('td')
+        tdLocalidade.innerHTML = res.regiao.nome
 
         const tr = document.createElement('tr')
 
-        tr.appendChild(tdPais)
-        tr.appendChild(tdCapital)
-        tr.appendChild(tdContinente)
+        tr.appendChild(tdSigla)
+        tr.appendChild(tdNome)
+        tr.appendChild(tdLocalidade)
 
         return tr
     })
