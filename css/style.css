@@ -2,6 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
+        
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 html{
@@ -18,7 +21,12 @@ body{
 
     padding: 30px;
 
-    background: linear-gradient(#c8f8fd, #d2b9ff, #ada3ff)
+    background: linear-gradient(#d2c7f0, #cbc6f5, #c5c6ff)
+}
+
+body > h1{
+    color: #4d23af;
+    margin:  20px 0;
 }
 
 .container{
@@ -37,8 +45,11 @@ body{
     max-height: 90vh;
     max-width: 700px;
 
-    border-radius: 20px;
+    border-radius: 4px;
+
+    box-shadow: 0 0 19px #16176881;
 }
+
 
 .container::-webkit-scrollbar{
     width: 0;
@@ -51,36 +62,36 @@ table{
     overflow-x: scroll;
 
 
-    background-color: rgba(28, 66, 170, 0.527);
+    background-color: rgba(84, 41, 202, 0.856);
+
     border-collapse: collapse;
-    color: rgb(255, 255, 255);
+    color: rgba(228, 224, 255, 0.753);
     font-family: 'Rawline';
 
-    
-    box-shadow: 5px 2px 19px #394ade52;
     }
 
 table thead{
-    background-color: rgba(30, 29, 88, 0.801);
+    background-color: rgba(18, 18, 44, 0.753);
+    text-align: center;
 }
 
 table td:nth-of-type(1),
 table td:nth-of-type(2)
 {
-    border-right: 1px rgba(51, 60, 184, 0.24) solid;
+    border-right: 1px rgba(136, 139, 179, 0.24) solid;
 }
 
 table th,
 table td{
-    padding: 10px 40px;
+    padding: 15px 40px;
 }
 
 table tr:nth-child(even){
-    background-color: #2b383a3b;
+    background-color: #2f2277a4;
 }
 
 table tr:hover{
-    background-color: #394adef8;
+    background-color: rgba(18, 18, 44, 0.753);
     cursor: pointer;
 }
 
