@@ -1,10 +1,12 @@
-## 🗺 Estados Brasileiros 🗺
-
-**A table with all Brazilian states**
-
+# <p align="center">🗺 Estados Brasileiros 🗺</p>
+<p align="center">A table with all Brazilian states</p>
+<h1 align="center">
 <img src="https://img.shields.io/apm/l/react?style=flat-square"> <img src="https://img.shields.io/github/stars/LuciLua/EstadosBrasileiros?style=flat-square">
-<img src="https://img.shields.io/github/last-commit/LuciLua/EstadosBrasileiros?style=flat-square"> <img src="https://img.shields.io/github/commit-activity/w/LuciLua/EstadosBrasileiros?style=flat-square">
+<img src="https://img.shields.io/github/last-commit/LuciLua/EstadosBrasileiros?style=flat-square"> <img src="https://img.shields.io/github/commit-activity/w/LuciLua/EstadosBrasileiros?style=flat-square"> <img src="https://img.shields.io/github/languages/code-size/LuciLua/EstadosBrasileiros">
 
+</br>
+</h1>
+</br>
 
 ## 🛠 Technologies used
 
@@ -14,11 +16,14 @@
 ## 🚀 How to start
 
 > clone the repository
-<code> git clone https://github.com/LuciLua/EstadosBrasileiros.git</code>
+```bash
+git clone https://github.com/LuciLua/EstadosBrasileiros.git
+```
 
 > open project folder
-<code> cd ./EstadosBrasileiros</code>
-
+```bash
+cd ./EstadosBrasileiros
+```
 
 ## 🖼 Preview
 
